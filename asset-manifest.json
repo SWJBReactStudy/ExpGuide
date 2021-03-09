@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.js": "/BRP/static/js/main.f5d1adfb.chunk.js",
-    "main.js.map": "/BRP/static/js/main.f5d1adfb.chunk.js.map",
+    "main.css": "/BRP/static/css/main.4c567344.chunk.css",
+    "main.js": "/BRP/static/js/main.4265a078.chunk.js",
+    "main.js.map": "/BRP/static/js/main.4265a078.chunk.js.map",
     "runtime-main.js": "/BRP/static/js/runtime-main.961473c1.js",
     "runtime-main.js.map": "/BRP/static/js/runtime-main.961473c1.js.map",
-    "static/js/2.7156e088.chunk.js": "/BRP/static/js/2.7156e088.chunk.js",
-    "static/js/2.7156e088.chunk.js.map": "/BRP/static/js/2.7156e088.chunk.js.map",
+    "static/js/2.606a453e.chunk.js": "/BRP/static/js/2.606a453e.chunk.js",
+    "static/js/2.606a453e.chunk.js.map": "/BRP/static/js/2.606a453e.chunk.js.map",
     "index.html": "/BRP/index.html",
-    "static/js/2.7156e088.chunk.js.LICENSE.txt": "/BRP/static/js/2.7156e088.chunk.js.LICENSE.txt"
+    "static/css/main.4c567344.chunk.css.map": "/BRP/static/css/main.4c567344.chunk.css.map",
+    "static/js/2.606a453e.chunk.js.LICENSE.txt": "/BRP/static/js/2.606a453e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.961473c1.js",
-    "static/js/2.7156e088.chunk.js",
-    "static/js/main.f5d1adfb.chunk.js"
+    "static/js/2.606a453e.chunk.js",
+    "static/css/main.4c567344.chunk.css",
+    "static/js/main.4265a078.chunk.js"
   ]
 }
