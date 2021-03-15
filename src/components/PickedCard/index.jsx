@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Blank from "../../atomic/Blank";
 import OpacityAnimate from "../../animations/RenderAnimate/OpacityAnimate";
 import BorderAnimate from "../../animations/BorderAnimate";
+import Colors from "../../style/KindColors";
 
 const ResultCard = styled.div`
   width: 420px;
@@ -148,19 +149,19 @@ const PickedCard = () => {
 	
 	const judgmentKind = (e) => {
 		if (e.kind === 'diamond') {
-			return 'cornflowerblue';
+			return Colors.diamond;
 		} else if (e.kind === 'clover') {
-			return 'forestgreen';
+			return Colors.clover
 		} else if (e.kind === 'heart') {
-			return 'salmon';
+			return Colors.heart
 		}
-		return '#444';
+		return Colors.spade;
 	}
 	
 	useEffect(() => {
 		let value = prompt();
-		setCards(cards.filter((card) => card.num <= value));
-		console.log(cards);
+		const newC = cards.filter((card) => card.num <= parseInt(value));
+		setCards(newC);
 	}, []);
 	
 	useEffect(() => {
