@@ -1,10 +1,9 @@
 import React, {useState, useEffect} from "react";
 import {Route, BrowserRouter} from "react-router-dom";
-import MainPage from './MainPage';
-import FirstPage from "./FirstPage";
+import MainPage from '../components/LowerBody/MainPage';
+import FirstPage from "../components/LowerBody/FirstPage";
 
-const App = () => {
-	const [isSetting, setIsSetting] = useState(false);
+const LowerBodyPage = () => {
 	
 	return (
 		<BrowserRouter>
@@ -14,4 +13,4 @@ const App = () => {
 	);
 }
 
-export default App;
+export default LowerBodyPage;

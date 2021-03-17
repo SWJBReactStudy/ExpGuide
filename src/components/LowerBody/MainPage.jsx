@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Header from "./components/Header";
-import RenderShowTip from "./animations/RenderAnimate/RenderShowTip";
-import PickedCard from "./components/PickedCard";
-import Blank from "./atomic/Blank";
-import Footer from "./components/Footer";
-import Modal from "./components/Modal";
-import BorderAnimate from "./animations/BorderAnimate";
+import Header from "../Header";
+import RenderShowTip from "../../animations/RenderAnimate/RenderShowTip";
+import PickedCard from "../PickedCard";
+import Blank from "../../atomic/Blank";
+import Footer from "./Footer";
+import Modal from "../Modal";
+import BorderAnimate from "../../animations/BorderAnimate";
 
 const Container = styled.div`
   position: relative;
