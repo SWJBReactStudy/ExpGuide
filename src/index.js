@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import '../src/style/global.css'
-import LowerBodyPage from './pages/LowerBodyPage'
+import './style/global.css'
 import MainPage from './components/LowerBody/MainPage'
 
 ReactDOM.render(

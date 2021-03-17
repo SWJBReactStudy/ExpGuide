@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
-import { Route, BrowserRouter } from 'react-router-dom'
-import MainPage from '../components/LowerBody/MainPage'
-import FirstPage from '../components/LowerBody/FirstPage'
+import React, { useState, useEffect } from 'react';
+import { Route, BrowserRouter } from 'react-router-dom';
+import MainPage from '../components/LowerBody/MainPage';
+import FirstPage from '../components/LowerBody/FirstPage';
 
 const LowerBodyPage = () => {
   return (
@@ -9,7 +9,7 @@ const LowerBodyPage = () => {
       <Route exact path="/" component={FirstPage} />
       <Route path="/main" component={MainPage} />
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default LowerBodyPage
+export default LowerBodyPage;
