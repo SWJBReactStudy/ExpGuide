@@ -1,4 +1,4 @@
-import {keyframes} from "styled-components";
+import { keyframes } from 'styled-components'
 
 const RenderShowTip = keyframes`
   0% {
@@ -10,6 +10,6 @@ const RenderShowTip = keyframes`
   100% {
     opacity: 65%;
   }
-`;
+`
 
-export default RenderShowTip;
+export default RenderShowTip

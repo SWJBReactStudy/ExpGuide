@@ -1,4 +1,4 @@
-import {keyframes} from "styled-components";
+import { keyframes } from 'styled-components'
 
 const BorderAnimate = keyframes`
   0% {
@@ -10,6 +10,6 @@ const BorderAnimate = keyframes`
   100% {
     background-position: 0% 50%;
   }
-`;
+`
 
-export default BorderAnimate;
+export default BorderAnimate

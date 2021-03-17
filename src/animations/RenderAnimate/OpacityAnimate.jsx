@@ -1,4 +1,4 @@
-import {keyframes} from "styled-components";
+import { keyframes } from 'styled-components'
 
 const OpacityAnimate = keyframes`
   0% {
@@ -7,6 +7,6 @@ const OpacityAnimate = keyframes`
   100% {
     opacity: 100%;
   }
-`;
+`
 
-export default OpacityAnimate;
+export default OpacityAnimate

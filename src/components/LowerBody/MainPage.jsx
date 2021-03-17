@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import Header from "../Header";
-import RenderShowTip from "../../animations/RenderAnimate/RenderShowTip";
-import PickedCard from "../PickedCard";
-import Blank from "../../atomic/Blank";
-import Footer from "./Footer";
-import Modal from "../Modal";
-import BorderAnimate from "../../animations/BorderAnimate";
+import React, { useState } from 'react'
+import styled from 'styled-components'
+import Header from './Header'
+import RenderShowTip from '../../animations/RenderAnimate/RenderShowTip'
+import PickedCard from './PickedCard'
+import Blank from '../../atomic/Blank'
+import Footer from './Footer'
+import Modal from './Modal'
+import BorderAnimate from '../../animations/BorderAnimate'
 
 const Container = styled.div`
   position: relative;
@@ -15,7 +15,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   &:after {
     content: '';
     position: absolute;
@@ -23,14 +23,24 @@ const Container = styled.div`
     left: calc(-1 * 2px);
     height: calc(100% + 2px * 2);
     width: calc(100% + 2px * 2);
-    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    background: linear-gradient(
+      60deg,
+      #f79533,
+      #f37055,
+      #ef4e7b,
+      #a166ab,
+      #5073b8,
+      #1098ad,
+      #07b39b,
+      #6fba82
+    );
     border-radius: calc(2 * 17px);
     z-index: -1;
     opacity: 3%;
     animation: ${BorderAnimate} 3s ease alternate infinite;
     background-size: 300% 300%;
   }
-`;
+`
 
 const ShowTip = styled.button`
   width: 32px;
@@ -46,18 +56,18 @@ const ShowTip = styled.button`
   color: #ccc;
   cursor: pointer;
   animation: ${RenderShowTip} 1s ease-in-out;
-`;
+`
 
 const MainPage = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   const clickedCloseBtn = () => {
-    setIsOpen(false);
-  };
+    setIsOpen(false)
+  }
 
   const onClickShowTip = () => {
-    setIsOpen(true);
-  };
+    setIsOpen(true)
+  }
 
   return (
     <Container>
@@ -74,7 +84,7 @@ const MainPage = () => {
 
       <Modal v={isOpen} handleCloseBtnClick={clickedCloseBtn} />
     </Container>
-  );
-};
+  )
+}
 
-export default MainPage;
+export default MainPage

@@ -1,4 +1,4 @@
-import {keyframes} from "styled-components";
+import { keyframes } from 'styled-components'
 
 const FirstRender = keyframes`
   0% {
@@ -9,6 +9,6 @@ const FirstRender = keyframes`
     opacity: 100%;
     transform: translateY(0);
   }
-`;
+`
 
-export default FirstRender;
+export default FirstRender
