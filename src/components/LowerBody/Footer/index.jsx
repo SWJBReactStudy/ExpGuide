@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Blank from "../../atomic/Blank";
+import Blank from "../../../atomic/Blank";
 
 const Container = styled.footer`
   min-height: 100px;
