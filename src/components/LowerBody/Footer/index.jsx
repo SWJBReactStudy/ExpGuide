@@ -12,11 +12,11 @@ const Container = styled.footer`
 `;
 
 const CopyText = styled.p`
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
   color: #555;
   opacity: 60%;
   font-weight: bold;
-	text-align: center;
+  text-align: center;
   @media screen and (max-width: 420px) {
     font-size: 12px;
   }
@@ -35,19 +35,24 @@ const LinkText = styled.a`
   font-size: 32px;
   font-weight: bold;
   opacity: 70%;
-  padding-bottom: .3rem;
+  padding-bottom: 0.3rem;
   border-bottom: 5px solid rgba(34, 34, 34, 0.8);
   display: block;
 `;
 
 const Footer = () => {
-	return <Container>
-		<CopyText>&copy; 2021. <SmallText>DongJin Han / Bottom Training Random Pokers</SmallText> All Rights
-			Reserved.</CopyText>
-		<Blank size={7}/>
-		<LinkText href='https://github.com/arkc1009'>GitHub</LinkText>
-		<Blank size={7}/>
-	</Container>
-}
+  return (
+    <Container>
+      <CopyText>
+        &copy; 2021.{" "}
+        <SmallText>DongJin Han / Bottom Training Random Pokers</SmallText> All
+        Rights Reserved.
+      </CopyText>
+      <Blank size={7} />
+      <LinkText href="https://github.com/arkc1009">GitHub</LinkText>
+      <Blank size={7} />
+    </Container>
+  );
+};
 
 export default Footer;
