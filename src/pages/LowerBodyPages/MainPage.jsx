@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import styled from 'styled-components';
-import Header from './Header';
+import Footer from '../../components/LowerBody/Footer';
+import Header from '../../components/LowerBody/Header';
 import RenderShowTip from '../../animations/RenderAnimate/RenderShowTip';
-import PickedCard from './PickedCard';
+import PickedCard from '../../components/LowerBody/PickedCard';
 import Blank from '../../atomic/Blank';
-import Footer from './Footer';
-import Modal from './Modal';
+import Modal from '../../components/LowerBody/Modal';
 import BorderAnimate from '../../animations/BorderAnimate';
+import RangeContext from '../../contexts/RangeContext';
+import { Redirect } from 'react-router-dom';
 
 const Container = styled.div`
   position: relative;
@@ -59,6 +61,8 @@ const ShowTip = styled.button`
 `;
 
 const MainPage = () => {
+  const { isSetting } = useContext(RangeContext)[0];
+
   const [isOpen, setIsOpen] = useState(false);
 
   const clickedCloseBtn = () => {
@@ -71,6 +75,7 @@ const MainPage = () => {
 
   return (
     <Container>
+      {isSetting ? '' : <Redirect to="/BRP" />}
       <Header />
       <ShowTip onClick={onClickShowTip}>?</ShowTip>
 

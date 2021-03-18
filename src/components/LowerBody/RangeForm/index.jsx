@@ -71,7 +71,7 @@ const RangeForm = ({ setRange }) => {
   };
 
   const onClickConfirm = () => {
-    setRange([minCount, maxCount]);
+    setRange(minCount, maxCount);
     setIsConfirm(isConfirm ? false : true);
   };
 

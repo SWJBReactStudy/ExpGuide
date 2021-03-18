@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import RangeForm from './RangeForm';
+import RangeForm from '../../components/LowerBody/RangeForm';
 import Colors from '../../style/KindColors';
 import Blank from '../../atomic/Blank';
 import BorderAnimate from '../../animations/BorderAnimate';
+import RangeContext from '../../contexts/RangeContext';
 
 const Container = styled.div`
   width: 600px;
@@ -73,41 +74,44 @@ const Confirm = styled(Link)`
 `;
 
 const FirstPage = () => {
-  const [isSetting, setIsSetting] = useState(false);
-  const [range, setRange] = useState([1, 13]);
+  const {
+    setCloverRange,
+    setSpadeRange,
+    setHeartRange,
+    setDiamondRange,
+    setIsSetting,
+  } = useContext(RangeContext)[1];
 
   const onClickConfirm = () => {
-    setIsSetting(true);
+    setIsSetting();
   };
-
-  useEffect(() => {
-    console.log(range);
-  }, range);
 
   return (
     <Container>
       <Form>
         <Label color={Colors.spade}>Spade</Label>
-        <RangeForm setRange={setRange} />
+        <RangeForm setRange={setSpadeRange} />
 
         <Blank size={2} />
 
         <Label color={Colors.diamond}>Diamond</Label>
-        <RangeForm />
+        <RangeForm setRange={setDiamondRange} />
 
         <Blank size={2} />
 
         <Label color={Colors.clover}>Clover</Label>
-        <RangeForm />
+        <RangeForm setRange={setCloverRange} />
 
         <Blank size={2} />
 
         <Label color={Colors.heart}>Heart</Label>
-        <RangeForm />
+        <RangeForm setRange={setHeartRange} />
 
         <Blank size={2} />
 
-        <Confirm to="/main">Go!</Confirm>
+        <Confirm to="/BRP/main" onClick={onClickConfirm}>
+          Go!
+        </Confirm>
       </Form>
     </Container>
   );

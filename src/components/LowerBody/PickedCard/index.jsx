@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import styled from 'styled-components';
 import Blank from '../../../atomic/Blank';
 import OpacityAnimate from '../../../animations/RenderAnimate/OpacityAnimate';
 import BorderAnimate from '../../../animations/BorderAnimate';
 import Colors from '../../../style/KindColors';
+import RangeContext from '../../../contexts/RangeContext';
 
 const ResultCard = styled.div`
   width: 420px;
@@ -74,6 +75,8 @@ const Kind = styled.span`
 `;
 
 const PickedCard = () => {
+  const value = useContext(RangeContext)[0];
+
   const [cards, setCards] = useState([
     { num: 1, kind: 'spade' },
     { num: 2, kind: 'spade' },
@@ -135,7 +138,6 @@ const PickedCard = () => {
       alert('남은 카드가 없습니다!');
       return;
     }
-
     setFlag(Math.floor(Math.random() * (cards.length - 1)));
     setCards(cards.filter((card, i) => i !== flag));
   };
@@ -170,9 +172,23 @@ const PickedCard = () => {
     return Colors.spade;
   };
 
+  const filteredCard = (card) => {
+    if (card.kind === 'clover') {
+      return value.clover[0] <= card.num && value.clover[1] >= card.num;
+    }
+    if (card.kind === 'spade') {
+      return value.spade[0] <= card.num && value.spade[1] >= card.num;
+    }
+    if (card.kind === 'heart') {
+      return value.heart[0] <= card.num && value.heart[1] >= card.num;
+    }
+    if (card.kind === 'diamond') {
+      return value.diamond[0] <= card.num && value.diamond[1] >= card.num;
+    }
+  };
+
   useEffect(() => {
-    let value = prompt();
-    const newC = cards.filter((card) => card.num <= parseInt(value));
+    const newC = cards.filter((card) => filteredCard(card));
     setCards(newC);
   }, []);
 
