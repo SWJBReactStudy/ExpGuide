@@ -8,6 +8,11 @@ const FLEX = styled.div`
 
 const Container = styled.div`
     margin: 0 auto;
+
+    //position
+    margin-top: 10px;
+    
+    //size
     width: 1200px;
     height: 100%;
 `
@@ -46,13 +51,6 @@ const Title = styled.p`
     border-radius: 10px;
 `
 
-const MainSection = styled.div`
-    background-color: #fff;
-    border-radius: 30px;
-    border: 1px solid #ddd;
-
-    box-shadow: 0px 5px 53px -32px rgba(0,0,0,0.36);
-`
 
 
 //난이도 별 버튼
@@ -151,6 +149,19 @@ const TimerSetting = styled.div`
     border: 1px solid #fafafa;
 `
 
+
+const MainSection = styled.div`
+    width: 1170px;
+    height: 600px;
+
+    // position
+    margin-top: 10px;
+
+    border-radius: 30px;
+    border: 1px solid #fafafa;
+    background-color: #fce9e9;
+    box-shadow: 0px 5px 53px -32px rgba(0,0,0,0.36);
+`
 
 // 함수 부분
 
