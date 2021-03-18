@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './style/global.css'
-import MainPage from './components/LowerBody/MainPage'
+import MainPage from './components/WholeBody/MainPage'
 
 ReactDOM.render(
   <React.StrictMode>
