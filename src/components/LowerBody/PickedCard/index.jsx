@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import styled from 'styled-components'
-import Blank from '../../../atomic/Blank'
-import OpacityAnimate from '../../../animations/RenderAnimate/OpacityAnimate'
-import BorderAnimate from '../../../animations/BorderAnimate'
-import Colors from '../../../style/KindColors'
+import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
+import Blank from '../../../atomic/Blank';
+import OpacityAnimate from '../../../animations/RenderAnimate/OpacityAnimate';
+import BorderAnimate from '../../../animations/BorderAnimate';
+import Colors from '../../../style/KindColors';
 
 const ResultCard = styled.div`
   width: 420px;
@@ -47,7 +47,7 @@ const ResultCard = styled.div`
     animation: ${BorderAnimate} 3s ease alternate infinite;
     background-size: 300% 300%;
   }
-`
+`;
 
 const Counter = styled.span`
   display: block;
@@ -57,7 +57,7 @@ const Counter = styled.span`
   color: #555;
   text-shadow: 1px 1px 1px gray;
   animation: ${OpacityAnimate} 1s ease-in;
-`
+`;
 
 const CardText = styled.span`
   font-family: 'Bebas Neue', cursive;
@@ -66,12 +66,12 @@ const CardText = styled.span`
   @media screen and (max-width: 420px) {
     font-size: 42px;
   }
-`
+`;
 
 const Kind = styled.span`
   color: ${(props) => props.kind};
   text-shadow: 2px 2px 5px #ccc;
-`
+`;
 
 const PickedCard = () => {
   const [cards, setCards] = useState([
@@ -126,71 +126,71 @@ const PickedCard = () => {
     { num: 10, kind: 'clover' },
     { num: 11, kind: 'clover' },
     { num: 12, kind: 'clover' },
-    { num: 13, kind: 'clover' }
-  ])
-  const [flag, setFlag] = useState(undefined)
+    { num: 13, kind: 'clover' },
+  ]);
+  const [flag, setFlag] = useState(undefined);
 
   const createCard = () => {
     if (cards.length <= 0) {
-      alert('남은 카드가 없습니다!')
-      return
+      alert('남은 카드가 없습니다!');
+      return;
     }
 
-    setFlag(Math.floor(Math.random() * (cards.length - 1)))
-    setCards(cards.filter((card, i) => i !== flag))
-  }
+    setFlag(Math.floor(Math.random() * (cards.length - 1)));
+    setCards(cards.filter((card, i) => i !== flag));
+  };
 
   const printCard = () => {
     if (cards.length <= 0) {
-      return <CardText>Press F5!</CardText>
+      return <CardText>Press F5!</CardText>;
     }
     if (flag === undefined) {
-      return <CardText>Click!</CardText>
+      return <CardText>Click!</CardText>;
     }
     return (
       <CardText>
         <Kind kind={judgmentKind(cards[flag])}>{cards[flag].kind}</Kind> :{' '}
         <Kind kind={'spade'}>{cards[flag].num}</Kind>
       </CardText>
-    )
-  }
+    );
+  };
 
   const printLeft = () => {
-    return cards.length
-  }
+    return cards.length;
+  };
 
   const judgmentKind = (e) => {
     if (e.kind === 'diamond') {
-      return Colors.diamond
+      return Colors.diamond;
     } else if (e.kind === 'clover') {
-      return Colors.clover
+      return Colors.clover;
     } else if (e.kind === 'heart') {
-      return Colors.heart
+      return Colors.heart;
     }
-    return Colors.spade
-  }
+    return Colors.spade;
+  };
 
   useEffect(() => {
-    let value = prompt()
-    const newC = cards.filter((card) => card.num <= parseInt(value))
-    setCards(newC)
-  }, [])
+    let value = prompt();
+    const newC = cards.filter((card) => card.num <= parseInt(value));
+    setCards(newC);
+  }, []);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key !== ' ') {
-        return
+        return;
       }
-      e.preventDefault()
-      createCard()
-    }
+      e.preventDefault();
+      createCard();
+    };
 
-    document.addEventListener('keydown', handleKeyDown)
+    document.addEventListener('keydown', handleKeyDown);
 
     return () => {
-      document.removeEventListener('keydown', handleKeyDown)
-    }
-  }, [cards])
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [cards]);
 
   return (
     <>
@@ -198,7 +198,7 @@ const PickedCard = () => {
       <Blank size={1.3} />
       <Counter>Left Card = {printLeft()}</Counter>
     </>
-  )
-}
+  );
+};
 
-export default PickedCard
+export default PickedCard;

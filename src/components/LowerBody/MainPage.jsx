@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
-import Header from './Header'
-import RenderShowTip from '../../animations/RenderAnimate/RenderShowTip'
-import PickedCard from './PickedCard'
-import Blank from '../../atomic/Blank'
-import Footer from './Footer'
-import Modal from './Modal'
-import BorderAnimate from '../../animations/BorderAnimate'
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import Header from './Header';
+import RenderShowTip from '../../animations/RenderAnimate/RenderShowTip';
+import PickedCard from './PickedCard';
+import Blank from '../../atomic/Blank';
+import Footer from './Footer';
+import Modal from './Modal';
+import BorderAnimate from '../../animations/BorderAnimate';
 
 const Container = styled.div`
   position: relative;
@@ -40,7 +40,7 @@ const Container = styled.div`
     animation: ${BorderAnimate} 3s ease alternate infinite;
     background-size: 300% 300%;
   }
-`
+`;
 
 const ShowTip = styled.button`
   width: 32px;
@@ -56,18 +56,18 @@ const ShowTip = styled.button`
   color: #ccc;
   cursor: pointer;
   animation: ${RenderShowTip} 1s ease-in-out;
-`
+`;
 
 const MainPage = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const clickedCloseBtn = () => {
-    setIsOpen(false)
-  }
+    setIsOpen(false);
+  };
 
   const onClickShowTip = () => {
-    setIsOpen(true)
-  }
+    setIsOpen(true);
+  };
 
   return (
     <Container>
@@ -84,7 +84,7 @@ const MainPage = () => {
 
       <Modal v={isOpen} handleCloseBtnClick={clickedCloseBtn} />
     </Container>
-  )
-}
+  );
+};
 
-export default MainPage
+export default MainPage;

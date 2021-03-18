@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-import ModalAnimate from '../../../animations/ModalAnimate'
-import BorderAnimate from '../../../animations/BorderAnimate'
+import React from 'react';
+import styled from 'styled-components';
+import ModalAnimate from '../../../animations/ModalAnimate';
+import BorderAnimate from '../../../animations/BorderAnimate';
 
 const ModalContainer = styled.div`
   position: absolute;
@@ -20,7 +20,7 @@ const ModalContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   animation: ${ModalAnimate} 1s;
-`
+`;
 
 const TipText = styled.p`
   color: black;
@@ -28,7 +28,7 @@ const TipText = styled.p`
   font-family: 'Nanum Gothic', sans-serif;
   font-weight: 1000;
   font-size: 18px;
-`
+`;
 
 const CloseButton = styled.button`
   width: 17px;
@@ -65,7 +65,7 @@ const CloseButton = styled.button`
     animation: ${BorderAnimate} 3s ease alternate infinite;
     background-size: 300% 300%;
   }
-`
+`;
 
 const Modal = ({ v, handleCloseBtnClick }) => {
   return (
@@ -75,7 +75,7 @@ const Modal = ({ v, handleCloseBtnClick }) => {
       </TipText>
       <CloseButton onClick={handleCloseBtnClick} />
     </ModalContainer>
-  )
-}
+  );
+};
 
-export default Modal
+export default Modal;

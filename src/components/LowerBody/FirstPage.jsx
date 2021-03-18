@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import RangeForm from "./RangeForm";
-import Colors from "../../style/KindColors";
-import Blank from "../../atomic/Blank";
-import BorderAnimate from "../../animations/BorderAnimate";
+import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import RangeForm from './RangeForm';
+import Colors from '../../style/KindColors';
+import Blank from '../../atomic/Blank';
+import BorderAnimate from '../../animations/BorderAnimate';
 
 const Container = styled.div`
   width: 600px;
@@ -28,7 +28,7 @@ const Form = styled.div`
 `;
 
 const Label = styled.label`
-  font-family: "Bebas Neue", cursive;
+  font-family: 'Bebas Neue', cursive;
   color: ${(props) => props.color};
   text-shadow: 1px 1px 2px gray;
   font-size: 32px;
@@ -47,7 +47,7 @@ const Confirm = styled(Link)`
   line-height: 40px;
 
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     top: calc(-1 * 2px);
     left: calc(-1 * 2px);
