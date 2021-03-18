@@ -2,6 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import './style.css'
 
+import GreenButton from './ButtonGreen.jsx'
+import BlueButton from './ButtonBlue.jsx'
+import RedButton from './ButtonRed.jsx'
+
 const FLEX = styled.div`
     display: flex;
 `
@@ -11,7 +15,7 @@ const Container = styled.div`
 
     //position
     margin-top: 10px;
-    
+
     //size
     width: 1200px;
     height: 100%;
@@ -51,89 +55,8 @@ const Title = styled.p`
     border-radius: 10px;
 `
 
-
-
-//난이도 별 버튼
 // var ButtonMargin = '80px';
-const BtnLv1 = styled.button`
-    background-color: #a4e785;
-    border: none;
-    
-    //size
-    width: 200px;
-    height: 80px;
 
-    // position
-    margin-left: 30px;
-    margin-top:  30px;
-
-    //property
-    color: white;
-    font-size: 18px;
-    border-radius: 20px;
-    cursor: pointer;
-
-    transition: 0.1s;
-    &:hover{
-        background-color: #62af6c;
-
-        transform: scale(1.05)
-    }
-`
-
-const BtnLv2 = styled.button`
-    background-color: #5c71cf;
-    border: none;
-    
-    //size
-    width: 200px;
-    height: 80px;
-
-    // position
-    margin-left: 30px;
-    margin-top:  30px;
-
-    //property
-    color: white;
-    font-size: 18px;
-    border-radius: 20px;
-    cursor: pointer;
-
-    transition: 0.1s;
-    &:hover{
-        background-color: #4f29b6;
-
-        transform: scale(1.05)
-    }
-`
-
-const BtnLv3 = styled.button`
-    background-color: #fa788a;
-    border: none;
-    
-    //size
-    width: 200px;
-    height: 80px;
-
-    // position
-    margin-top:  30px;
-    margin-left: 30px;
-    margin-right: 30px;
-    
-
-    //property
-    color: white;
-    font-size: 18px;
-    border-radius: 20px;
-    cursor: pointer;
-
-    transition: 0.1s;
-    &:hover{
-        background-color: #fa3598;
-
-        transform: scale(1.05)
-    }
-`
 
 //타이머 부분
 const TimerSetting = styled.div`
@@ -174,9 +97,12 @@ const MainPage = () =>{
             <FLEX>
                 <SettingSection>
                     <Title>난이도를 선택하세요!</Title>
-                    <BtnLv1 >초보자</BtnLv1>
-                    <BtnLv2 >중급자</BtnLv2>
-                    <BtnLv3 >숙련자</BtnLv3>
+                    <FLEX>
+                        {/* 텍스트는 각각의 버튼의 export에 있음 */}
+                        <GreenButton >초보자</GreenButton>
+                        <BlueButton >중급자</BlueButton>
+                        <RedButton >숙련자</RedButton>
+                    </FLEX>
                 </SettingSection>
 
                 <TimerSetting>
