@@ -13,7 +13,7 @@ const ModalContainer = styled.div`
   background-color: white;
   box-shadow: 2px 2px 2px gray;
   opacity: 70%;
-  z-index: 10;
+  z-index: 2;
   padding: 1.8rem;
   border-radius: 30px;
   display: ${(props) => (props.v ? 'flex' : 'none')};
@@ -67,13 +67,13 @@ const CloseButton = styled.button`
   }
 `;
 
-const Modal = ({ v, handleCloseBtnClick }) => {
+const Modal = ({ v, handleBtnClick }) => {
   return (
     <ModalContainer v={v}>
       <TipText>
         하트, 클로버 = 스쿼트 / 다이아 = 왼발 런지 / 스페이드 = 오른발 런지
       </TipText>
-      <CloseButton onClick={handleCloseBtnClick} />
+      <CloseButton onClick={() => handleBtnClick(true)} />
     </ModalContainer>
   );
 };
