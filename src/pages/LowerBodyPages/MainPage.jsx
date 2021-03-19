@@ -5,10 +5,11 @@ import Header from '../../components/LowerBody/Header';
 import RenderShowTip from '../../animations/RenderAnimate/RenderShowTip';
 import PickedCard from '../../components/LowerBody/PickedCard';
 import Blank from '../../atomic/Blank';
-import Modal from '../../components/LowerBody/Modal';
+import TipModal from '../../components/LowerBody/Modal/TipModal';
 import BorderAnimate from '../../animations/BorderAnimate';
 import RangeContext from '../../contexts/RangeContext';
 import { Redirect } from 'react-router-dom';
+import PEsetModal from '../../components/LowerBody/Modal/PEsetModal';
 
 const Container = styled.div`
   position: relative;
@@ -64,12 +65,18 @@ const MainPage = () => {
   const { isSetting } = useContext(RangeContext)[0];
 
   const [isOpen, setIsOpen] = useState(false);
+  const [isOpenSetPE, setIsOpenSetPE] = useState(false);
 
   const clickedCloseBtn = () => {
     setIsOpen(false);
   };
 
   const onClickShowTip = () => {
+    if (isOpen) {
+      setIsOpen(false);
+      return;
+    }
+
     setIsOpen(true);
   };
 
@@ -87,7 +94,8 @@ const MainPage = () => {
 
       <Footer />
 
-      <Modal v={isOpen} handleCloseBtnClick={clickedCloseBtn} />
+      <TipModal v={isOpen} handleBtnClick={setIsOpenSetPE} />
+      <PEsetModal isOpen={isOpenSetPE} closeModal={setIsOpenSetPE} />
     </Container>
   );
 };
