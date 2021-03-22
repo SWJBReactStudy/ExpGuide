@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import Modal from 'react-modal';
+import KindContext from '../../../contexts/KindContext';
 
 const ModalContainer = styled(Modal)`
   position: absolute;
@@ -18,6 +19,13 @@ const ModalContainer = styled(Modal)`
 `;
 
 const PEsetModal = ({ closeModal, isOpen }) => {
+  const { 
+    setSpadePE, 
+    setDiamondPE, 
+    setCloverPE, 
+    setHeartPE, 
+  } = useContext(KindContext)[1];
+
   return (
     <ModalContainer
       isOpen={isOpen}
