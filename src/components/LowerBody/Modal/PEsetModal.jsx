@@ -35,7 +35,9 @@ const PEsetModal = ({ closeModal, isOpen }) => {
           backgroundColor: 'rgba(0, 0, 0, 0.6)',
         },
       }}
-    />
+    >
+      Content
+    </ModalContainer>
   );
 };
 
