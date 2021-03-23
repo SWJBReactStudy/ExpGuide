@@ -71,10 +71,17 @@ const CloseButton = styled.button`
 const Modal = ({ v, handleBtnClick }) => {
   const { clover, diamond, spade, heart } = useContext(KindContext)[0];
 
+  const checkValue = (kind) => {
+    if (!kind) return '??';
+
+    return kind;
+  };
+
   return (
     <ModalContainer v={v}>
       <TipText>
-        클로버 = {clover} | 다이아 = {diamond} | 스페이드 ={spade} | 하트 = {heart}
+        클로버 = {checkValue(clover)} | 다이아 = {checkValue(diamond)} |
+        스페이드 = {checkValue(spade)} | 하트 = {checkValue(heart)}
       </TipText>
       <CloseButton onClick={() => handleBtnClick(true)} />
     </ModalContainer>
