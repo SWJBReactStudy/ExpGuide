@@ -74,8 +74,7 @@ const Modal = ({ v, handleBtnClick }) => {
   return (
     <ModalContainer v={v}>
       <TipText>
-        하트 = {heart} | 클로버 = {clover} | 다이아 = {diamond} | 스페이드 ={' '}
-        {spade}
+        클로버 = {clover} | 다이아 = {diamond} | 스페이드 ={spade} | 하트 = {heart}
       </TipText>
       <CloseButton onClick={() => handleBtnClick(true)} />
     </ModalContainer>
