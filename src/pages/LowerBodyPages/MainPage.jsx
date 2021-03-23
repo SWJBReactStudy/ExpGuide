@@ -10,6 +10,7 @@ import BorderAnimate from '../../animations/BorderAnimate';
 import RangeContext from '../../contexts/RangeContext';
 import { Redirect } from 'react-router-dom';
 import PEsetModal from '../../components/LowerBody/Modal/PEsetModal';
+import KindProvider from '../../provider/KindProvider';
 
 const Container = styled.div`
   position: relative;
@@ -67,10 +68,6 @@ const MainPage = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenSetPE, setIsOpenSetPE] = useState(false);
 
-  const clickedCloseBtn = () => {
-    setIsOpen(false);
-  };
-
   const onClickShowTip = () => {
     if (isOpen) {
       setIsOpen(false);
@@ -94,8 +91,10 @@ const MainPage = () => {
 
       <Footer />
 
-      <TipModal v={isOpen} handleBtnClick={setIsOpenSetPE} />
-      <PEsetModal isOpen={isOpenSetPE} closeModal={setIsOpenSetPE} />
+      <KindProvider>
+        <TipModal v={isOpen} handleBtnClick={setIsOpenSetPE} />
+        <PEsetModal isOpen={isOpenSetPE} isOpenModal={setIsOpenSetPE} />
+      </KindProvider>
     </Container>
   );
 };

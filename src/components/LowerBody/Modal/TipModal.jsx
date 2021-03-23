@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import ModalAnimate from '../../../animations/ModalAnimate';
 import BorderAnimate from '../../../animations/BorderAnimate';
+import KindContext from '../../../contexts/KindContext';
 
 const ModalContainer = styled.div`
   position: absolute;
-  width: 700px;
+  width: 800px;
   height: 50px;
   left: 50%;
   top: 5%;
@@ -68,10 +69,19 @@ const CloseButton = styled.button`
 `;
 
 const Modal = ({ v, handleBtnClick }) => {
+  const { clover, diamond, spade, heart } = useContext(KindContext)[0];
+
+  const checkValue = (kind) => {
+    if (!kind) return '??';
+
+    return kind;
+  };
+
   return (
     <ModalContainer v={v}>
       <TipText>
-        하트, 클로버 = 스쿼트 / 다이아 = 왼발 런지 / 스페이드 = 오른발 런지
+        클로버 = {checkValue(clover)} | 다이아 = {checkValue(diamond)} |
+        스페이드 = {checkValue(spade)} | 하트 = {checkValue(heart)}
       </TipText>
       <CloseButton onClick={() => handleBtnClick(true)} />
     </ModalContainer>
