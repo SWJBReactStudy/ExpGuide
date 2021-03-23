@@ -5,7 +5,7 @@ import KindContext from '../../../contexts/KindContext';
 
 const ModalContainer = styled(Modal)`
   position: absolute;
-  top: 40%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
@@ -35,6 +35,7 @@ const PEsetModal = ({ closeModal, isOpen }) => {
           backgroundColor: 'rgba(0, 0, 0, 0.6)',
         },
       }}
+      
     >
       Content
     </ModalContainer>
