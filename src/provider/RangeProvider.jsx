@@ -2,38 +2,11 @@ import React, { useState } from 'react';
 import RangeContext from '../contexts/RangeContext';
 
 const RangeProvider = ({ children }) => {
-  const setCloverRange = (min, max) => {
+  const setRange = (min, max, kind) => {
     setCardsRange((prevState) => {
       return {
         ...prevState,
-        clover: [min, max],
-      };
-    });
-  };
-
-  const setSpadeRange = (min, max) => {
-    setCardsRange((prevState) => {
-      return {
-        ...prevState,
-        spade: [min, max],
-      };
-    });
-  };
-
-  const setHeartRange = (min, max) => {
-    setCardsRange((prevState) => {
-      return {
-        ...prevState,
-        heart: [min, max],
-      };
-    });
-  };
-
-  const setDiamondRange = (min, max) => {
-    setCardsRange((prevState) => {
-      return {
-        ...prevState,
-        diamond: [min, max],
+        [kind]: [min, max],
       };
     });
   };
@@ -56,10 +29,7 @@ const RangeProvider = ({ children }) => {
   };
 
   const functionState = {
-    setCloverRange,
-    setSpadeRange,
-    setHeartRange,
-    setDiamondRange,
+    setRange,
     setIsSetting,
   };
   const [cardsRange, setCardsRange] = useState(initialState);

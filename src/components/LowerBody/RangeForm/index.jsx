@@ -63,7 +63,7 @@ const ConfirmButton = styled.button`
   }
 `;
 
-const RangeForm = ({ setRange }) => {
+const RangeForm = ({ kind, setRange }) => {
   const [minCount, setMinCount] = useState(1);
   const [maxCount, setMaxCount] = useState(13);
   const [isConfirm, setIsConfirm] = useState(false);
@@ -91,7 +91,7 @@ const RangeForm = ({ setRange }) => {
   };
 
   const onClickConfirm = () => {
-    setRange(minCount, maxCount);
+    setRange(minCount, maxCount, kind);
     setIsConfirm(isConfirm ? false : true);
   };
 

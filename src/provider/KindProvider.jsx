@@ -2,38 +2,11 @@ import React, { useState } from 'react';
 import KindContext from '../contexts/KindContext';
 
 const KindProvider = ({ children }) => {
-  const setSpadePE = (PE) => {
+  const setPE = (PE, kind) => {
     setKindPE((prevState) => {
       return {
         ...prevState,
-        spade: PE,
-      };
-    });
-  };
-
-  const setDiamondPE = (PE) => {
-    setKindPE((prevState) => {
-      return {
-        ...prevState,
-        diamond: PE,
-      };
-    });
-  };
-
-  const setCloverPE = (PE) => {
-    setKindPE((prevState) => {
-      return {
-        ...prevState,
-        clover: PE,
-      };
-    });
-  };
-
-  const setHeartPE = (PE) => {
-    setKindPE((prevState) => {
-      return {
-        ...prevState,
-        heart: PE,
+        [kind]: PE,
       };
     });
   };
@@ -45,17 +18,10 @@ const KindProvider = ({ children }) => {
     heart: '스쿼트',
   };
 
-  const functionState = {
-    setSpadePE,
-    setDiamondPE,
-    setCloverPE,
-    setHeartPE,
-  };
-
   const [kindPE, setKindPE] = useState(firstPE);
 
   return (
-    <KindContext.Provider value={[kindPE, functionState]}>
+    <KindContext.Provider value={[kindPE, setPE]}>
       {children}
     </KindContext.Provider>
   );
