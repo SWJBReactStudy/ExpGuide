@@ -10,8 +10,8 @@ ReactDOM.render(
   <React.StrictMode>
     <RangeProvider>
       <BrowserRouter>
-        <Route exact path="/BRP/" component={FirstPage} />
-        <Route path="/BRP/main/" component={MainPage} />
+        <Route exact path="/BRP" component={FirstPage} />
+        <Route path="/BRP/main" component={MainPage} />
       </BrowserRouter>
     </RangeProvider>
   </React.StrictMode>,
