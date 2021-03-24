@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import FirstRender from "../../animations/RenderAnimate/FirstRender";
+import React from 'react';
+import styled from 'styled-components';
+import FirstRender from '../../../animations/RenderAnimate/FirstRender';
 
 const StyledHeader = styled.div`
   display: flex;
@@ -38,12 +38,12 @@ const SubTitle = styled.h1`
 `;
 
 const Header = () => {
-	return (
-		<StyledHeader>
-			<Title>BRP</Title>
-			<SubTitle>Bottom Random Pokers</SubTitle>
-		</StyledHeader>
-	)
-}
+  return (
+    <StyledHeader>
+      <Title>BRP</Title>
+      <SubTitle>Bottom Random Pokers</SubTitle>
+    </StyledHeader>
+  );
+};
 
 export default Header;
