@@ -5,11 +5,13 @@ import './style/global.css';
 import RangeProvider from './provider/RangeProvider';
 import MainPage from './pages/LowerBodyPages/MainPage';
 import FirstPage from './pages/LowerBodyPages/FirstPage';
+import App from './pages/App';
 
 ReactDOM.render(
   <React.StrictMode>
     <RangeProvider>
       <BrowserRouter>
+        <Route exact path="/" component={App} />
         <Route exact path="/BRP" component={FirstPage} />
         <Route path="/BRP/main" component={MainPage} />
       </BrowserRouter>
