@@ -6,6 +6,7 @@ import Colors from '../../style/KindColors';
 import Blank from '../../atomic/Blank';
 import BorderAnimate from '../../animations/BorderAnimate';
 import RangeContext from '../../contexts/RangeContext';
+import Label from '../../atomic/Label';
 
 const Container = styled.div`
   width: 600px;
@@ -26,13 +27,6 @@ const Form = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-`;
-
-const Label = styled.label`
-  font-family: 'Bebas Neue', cursive;
-  color: ${(props) => props.color};
-  text-shadow: 1px 1px 2px gray;
-  font-size: 32px;
 `;
 
 const Confirm = styled(Link)`
@@ -74,13 +68,7 @@ const Confirm = styled(Link)`
 `;
 
 const FirstPage = () => {
-  const {
-    setCloverRange,
-    setSpadeRange,
-    setHeartRange,
-    setDiamondRange,
-    setIsSetting,
-  } = useContext(RangeContext)[1];
+  const { setRange, setIsSetting } = useContext(RangeContext)[1];
 
   const onClickConfirm = () => {
     setIsSetting();
@@ -90,22 +78,22 @@ const FirstPage = () => {
     <Container>
       <Form>
         <Label color={Colors.spade}>Spade</Label>
-        <RangeForm setRange={setSpadeRange} />
+        <RangeForm kind="spade" setRange={setRange} />
 
         <Blank size={2} />
 
         <Label color={Colors.diamond}>Diamond</Label>
-        <RangeForm setRange={setDiamondRange} />
+        <RangeForm kind="diamond" setRange={setRange} />
 
         <Blank size={2} />
 
         <Label color={Colors.clover}>Clover</Label>
-        <RangeForm setRange={setCloverRange} />
+        <RangeForm kind="clover" setRange={setRange} />
 
         <Blank size={2} />
 
         <Label color={Colors.heart}>Heart</Label>
-        <RangeForm setRange={setHeartRange} />
+        <RangeForm kind="heart" setRange={setRange} />
 
         <Blank size={2} />
 

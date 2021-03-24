@@ -43,7 +43,27 @@ const NumberDiv = styled.div`
   font-weight: ${(props) => (props.isConfirm ? 'bold' : 'normal')};
 `;
 
-const RangeForm = ({ setRange }) => {
+const ConfirmButton = styled.button`
+  width: 35px;
+  height: 20px;
+  cursor: pointer;
+  opacity: ${(props) => (props.isConfirm ? '1' : '0.5')};
+  border: 1px solid gray;
+  background-color: #ddd;
+  outline: none;
+  transition: transform 0.2s;
+  & > * {
+    opacity: 100%;
+    color: #111;
+  }
+  &:hover {
+    opacity: 1;
+    transform: scale(1.2);
+    background-color: #eee;
+  }
+`;
+
+const RangeForm = ({ kind, setRange }) => {
   const [minCount, setMinCount] = useState(1);
   const [maxCount, setMaxCount] = useState(13);
   const [isConfirm, setIsConfirm] = useState(false);
@@ -71,7 +91,7 @@ const RangeForm = ({ setRange }) => {
   };
 
   const onClickConfirm = () => {
-    setRange(minCount, maxCount);
+    setRange(minCount, maxCount, kind);
     setIsConfirm(isConfirm ? false : true);
   };
 
@@ -89,7 +109,9 @@ const RangeForm = ({ setRange }) => {
 
       <Blank size={1} />
 
-      <button onClick={onClickConfirm}>{!isConfirm ? 'OK!' : 'NO!'}</button>
+      <ConfirmButton isConfirm={isConfirm} onClick={onClickConfirm}>
+        <span>{!isConfirm ? 'OK?' : 'Fix'}</span>
+      </ConfirmButton>
     </Container>
   );
 };
