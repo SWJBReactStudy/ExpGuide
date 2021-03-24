@@ -97,7 +97,7 @@ const FirstPage = () => {
 
         <Blank size={2} />
 
-        <Confirm to="/BRP/main" onClick={onClickConfirm}>
+        <Confirm to="/main" onClick={onClickConfirm}>
           Go!
         </Confirm>
       </Form>
