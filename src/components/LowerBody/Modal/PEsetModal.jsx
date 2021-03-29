@@ -20,6 +20,10 @@ const ModalContainer = styled(Modal)`
   z-index: 99;
   padding: 4rem;
 
+  @media screen and (max-width: 420px) {
+    width: 300px;
+  }
+
   &:focus {
     outline: none;
   }
