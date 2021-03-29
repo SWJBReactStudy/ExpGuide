@@ -5,6 +5,7 @@ import './style/global.css';
 import RangeProvider from './provider/RangeProvider';
 import MainPage from './pages/LowerBodyPages/MainPage';
 import FirstPage from './pages/LowerBodyPages/FirstPage';
+import App from './pages/App';
 
 ReactDOM.render(
   <React.StrictMode>
