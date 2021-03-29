@@ -79,7 +79,7 @@ const MainPage = () => {
 
   return (
     <Container>
-      {isSetting ? '' : <Redirect to="/BRP" />}
+      {isSetting ? '' : <Redirect to="/ExpGuide/BRP" />}
       <Header />
       <ShowTip onClick={onClickShowTip}>?</ShowTip>
 

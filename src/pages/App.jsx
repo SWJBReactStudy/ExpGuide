@@ -2,7 +2,7 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 
 const App = () => {
-  return <Redirect to="BRP/" />;
+  return <Redirect to="/ExpGuide/BRP" />;
 };
 
 export default App;
