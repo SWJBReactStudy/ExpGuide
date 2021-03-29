@@ -28,15 +28,15 @@ const BtnLv2 = styled.button`
     }
 `
 
-const BlueButton = () =>{
+const BlueButton = () => {
 
-    return(
+    return (
         <div>
             <BtnLv2>중급자</BtnLv2>
         </div>
-        
+
     )
-    
+
 }
 
 export default BlueButton;
