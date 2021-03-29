@@ -89,7 +89,7 @@ const MainSection = styled.div`
 // 함수 부분
 
 
-const MainPage = () =>{
+const wholeBodyPage = () =>{
     
     
     return(
@@ -121,7 +121,7 @@ const MainPage = () =>{
 
 
 
-export default MainPage
+export default wholeBodyPage
 
 //참고글 https://blog.nerdfactory.ai/2019/10/25/react-styled-components.html
 //폰트어썸 사용하기 https://www.daleseo.com/react-font-awesome/ 
