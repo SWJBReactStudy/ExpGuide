@@ -1,70 +1,44 @@
-# Getting Started with Create React MainPage
+## Exp Guide
 
-This project was bootstrapped with [Create React MainPage](https://github.com/facebook/create-react-app).
+교도소 운동루틴을 가이드 합니다.
 
-## Available Scripts
+- 상체 운동 가이드 페이지
+- 하체 운동 가이드 페이지
+- 전신 운동 가이드 페이지
 
-In the project directory, you can run:
+총 3개의 페이지를 라우팅 하여 제공합니다!
 
-### `yarn start`
+## 개발 내역
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+하체 운동 ( 죽음의 카드 운동 ) 이 사용가능할 정도의 구현이 완료되었습니다!
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- 사용자가 카드의 범위를 지정 가능합니다.
+- 카드를 랜덤으로 뽑으면서 운동이 가능합니다.
 
-### `yarn test`
+상체 운동 및 전신 운동 페이지를 브랜치를 분기하여 제작 중 입니다!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 오 예스!
 
-### `yarn build`
+3명의 같은 학교 학생이 react를 공부하기 위해 시작했습니다.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+위 프로젝트를 통해 우리는 우리가 각자 웹을 배포할 수 있을 정도의 경험을 쌓길 원합니다!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 더 더 더 더더더
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `yarn eject`
+DB 연결도 하고 싶습니다!
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 시작하기
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`yarn` 을 통해 의존성을 설치합니다.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`yarn start` 를 통해 개발모드를 시작합니다.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## ( 배포하기 )
 
-## Learn More
+gh-pages를 통해 github.io에 배포합니다.
 
-You can learn more in the [Create React MainPage documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+PR 머지를 통해 master 브랜치로 기능을 업로드합니다.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web MainPage
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`yarn deploy` 를 통해 배포합니다.

@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import RangeForm from "./RangeForm";
-import Colors from "../../style/KindColors";
-import Blank from "../../atomic/Blank";
-import BorderAnimate from "../../animations/BorderAnimate";
+import React, { useContext } from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import RangeForm from '../../components/LowerBody/RangeForm';
+import Colors from '../../style/KindColors';
+import Blank from '../../atomic/Blank';
+import BorderAnimate from '../../animations/BorderAnimate';
+import RangeContext from '../../contexts/RangeContext';
+import Label from '../../atomic/Label';
 
 const Container = styled.div`
   width: 600px;
@@ -27,13 +29,6 @@ const Form = styled.div`
   flex-direction: column;
 `;
 
-const Label = styled.label`
-  font-family: "Bebas Neue", cursive;
-  color: ${(props) => props.color};
-  text-shadow: 1px 1px 2px gray;
-  font-size: 32px;
-`;
-
 const Confirm = styled(Link)`
   width: 70px;
   height: 40px;
@@ -47,7 +42,7 @@ const Confirm = styled(Link)`
   line-height: 40px;
 
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     top: calc(-1 * 2px);
     left: calc(-1 * 2px);
@@ -73,41 +68,38 @@ const Confirm = styled(Link)`
 `;
 
 const FirstPage = () => {
-  const [isSetting, setIsSetting] = useState(false);
-  const [range, setRange] = useState([1, 13]);
+  const { setRange, setIsSetting } = useContext(RangeContext)[1];
 
   const onClickConfirm = () => {
-    setIsSetting(true);
+    setIsSetting();
   };
-
-  useEffect(() => {
-    console.log(range);
-  }, range);
 
   return (
     <Container>
       <Form>
         <Label color={Colors.spade}>Spade</Label>
-        <RangeForm setRange={setRange} />
+        <RangeForm kind="spade" setRange={setRange} />
 
         <Blank size={2} />
 
         <Label color={Colors.diamond}>Diamond</Label>
-        <RangeForm />
+        <RangeForm kind="diamond" setRange={setRange} />
 
         <Blank size={2} />
 
         <Label color={Colors.clover}>Clover</Label>
-        <RangeForm />
+        <RangeForm kind="clover" setRange={setRange} />
 
         <Blank size={2} />
 
         <Label color={Colors.heart}>Heart</Label>
-        <RangeForm />
+        <RangeForm kind="heart" setRange={setRange} />
 
         <Blank size={2} />
 
-        <Confirm to="/main">Go!</Confirm>
+        <Confirm to="/ExpGuide/BRP/main" onClick={onClickConfirm}>
+          Go!
+        </Confirm>
       </Form>
     </Container>
   );

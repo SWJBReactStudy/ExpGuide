@@ -1,11 +1,12 @@
-import React from 'react'
-import styled from 'styled-components'
-import ModalAnimate from '../../../animations/ModalAnimate'
-import BorderAnimate from '../../../animations/BorderAnimate'
+import React, { useContext } from 'react';
+import styled from 'styled-components';
+import ModalAnimate from '../../../animations/ModalAnimate';
+import BorderAnimate from '../../../animations/BorderAnimate';
+import KindContext from '../../../contexts/KindContext';
 
 const ModalContainer = styled.div`
   position: absolute;
-  width: 700px;
+  width: 800px;
   height: 50px;
   left: 50%;
   top: 5%;
@@ -13,14 +14,14 @@ const ModalContainer = styled.div`
   background-color: white;
   box-shadow: 2px 2px 2px gray;
   opacity: 70%;
-  z-index: 10;
+  z-index: 2;
   padding: 1.8rem;
   border-radius: 30px;
   display: ${(props) => (props.v ? 'flex' : 'none')};
   align-items: center;
   justify-content: space-around;
   animation: ${ModalAnimate} 1s;
-`
+`;
 
 const TipText = styled.p`
   color: black;
@@ -28,7 +29,7 @@ const TipText = styled.p`
   font-family: 'Nanum Gothic', sans-serif;
   font-weight: 1000;
   font-size: 18px;
-`
+`;
 
 const CloseButton = styled.button`
   width: 17px;
@@ -65,17 +66,26 @@ const CloseButton = styled.button`
     animation: ${BorderAnimate} 3s ease alternate infinite;
     background-size: 300% 300%;
   }
-`
+`;
 
-const Modal = ({ v, handleCloseBtnClick }) => {
+const Modal = ({ v, handleBtnClick }) => {
+  const { clover, diamond, spade, heart } = useContext(KindContext)[0];
+
+  const checkValue = (kind) => {
+    if (!kind) return '??';
+
+    return kind;
+  };
+
   return (
     <ModalContainer v={v}>
       <TipText>
-        하트, 클로버 = 스쿼트 / 다이아 = 왼발 런지 / 스페이드 = 오른발 런지
+        클로버 = {checkValue(clover)} | 다이아 = {checkValue(diamond)} |
+        스페이드 = {checkValue(spade)} | 하트 = {checkValue(heart)}
       </TipText>
-      <CloseButton onClick={handleCloseBtnClick} />
+      <CloseButton onClick={() => handleBtnClick(true)} />
     </ModalContainer>
-  )
-}
+  );
+};
 
-export default Modal
+export default Modal;

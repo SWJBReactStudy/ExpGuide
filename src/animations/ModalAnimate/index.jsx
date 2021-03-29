@@ -1,4 +1,4 @@
-import { keyframes } from 'styled-components'
+import { keyframes } from 'styled-components';
 
 const ModalAnimate = keyframes`
   0% {
@@ -7,6 +7,6 @@ const ModalAnimate = keyframes`
   100% {
     opacity: 50%;
   }
-`
+`;
 
-export default ModalAnimate
+export default ModalAnimate;

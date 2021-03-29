@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import FirstRender from '../../../animations/RenderAnimate/FirstRender'
+import React from 'react';
+import styled from 'styled-components';
+import FirstRender from '../../../animations/RenderAnimate/FirstRender';
 
 const StyledHeader = styled.div`
   display: flex;
@@ -9,7 +9,7 @@ const StyledHeader = styled.div`
   justify-content: center;
   width: 100%;
   height: 300px;
-`
+`;
 
 const Title = styled.h1`
   font-size: 72px;
@@ -22,7 +22,7 @@ const Title = styled.h1`
     font-size: 64px;
     text-shadow: 1px 1px 1px gray;
   }
-`
+`;
 
 const SubTitle = styled.h1`
   font-size: 48px;
@@ -35,7 +35,7 @@ const SubTitle = styled.h1`
     font-size: 24px;
     text-shadow: 1px 1px 1px gray;
   }
-`
+`;
 
 const Header = () => {
   return (
@@ -43,7 +43,7 @@ const Header = () => {
       <Title>BRP</Title>
       <SubTitle>Bottom Random Pokers</SubTitle>
     </StyledHeader>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
