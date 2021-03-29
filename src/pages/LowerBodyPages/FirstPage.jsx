@@ -18,6 +18,11 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 420px) {
+    width: 350px;
+    height: 700px;
+  }
 `;
 
 const Form = styled.div`
@@ -27,6 +32,11 @@ const Form = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  @media screen and (max-width: 420px) {
+    padding: 1.7rem;
+    padding-top: 3rem;
+  }
 `;
 
 const Confirm = styled(Link)`

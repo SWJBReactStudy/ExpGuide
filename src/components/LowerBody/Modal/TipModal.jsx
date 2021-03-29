@@ -21,6 +21,11 @@ const ModalContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   animation: ${ModalAnimate} 1s;
+
+  @media screen and (max-width: 420px) {
+    width: 300px;
+    padding: 1.8rem 1rem 1.8rem 1.8rem;
+  }
 `;
 
 const TipText = styled.p`
@@ -29,6 +34,10 @@ const TipText = styled.p`
   font-family: 'Nanum Gothic', sans-serif;
   font-weight: 1000;
   font-size: 18px;
+
+  @media screen and (max-width: 420px) {
+    font-size: 14px;
+  }
 `;
 
 const CloseButton = styled.button`
@@ -42,6 +51,10 @@ const CloseButton = styled.button`
   position: relative;
   border: none;
   box-shadow: 1px 1px 5px black;
+
+  @media screen and (max-width: 420px) {
+    width: 30px;
+  }
 
   &:after {
     content: '';
