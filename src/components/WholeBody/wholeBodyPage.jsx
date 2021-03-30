@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import './style.css'
 
-import GreenButton from './ButtonGreen.jsx'
-import BlueButton from './ButtonBlue.jsx'
-import RedButton from './ButtonRed.jsx'
+import GreenButton from './Buttons/ButtonGreen.jsx'
+import BlueButton from './Buttons/ButtonBlue.jsx'
+import RedButton from './Buttons/ButtonRed.jsx'
 
 const FLEX = styled.div`
     display: flex;

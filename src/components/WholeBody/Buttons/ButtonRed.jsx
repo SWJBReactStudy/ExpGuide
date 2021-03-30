@@ -29,11 +29,11 @@ const BtnLv3 = styled.button`
     }
 `
 
-const RedButton = () =>{
+const RedButton = ({children}) =>{
 
     return(
         <div>
-            <BtnLv3>숙련자</BtnLv3>
+            <BtnLv3>{children}</BtnLv3>
         </div>
         
     )
