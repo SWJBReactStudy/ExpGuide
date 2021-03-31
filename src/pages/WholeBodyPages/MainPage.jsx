@@ -91,11 +91,7 @@ const MainSection = styled.div`
 
 const WholeBodyPage = () =>{
 
-    const [Time, setTime] = useState({
-        beginner: 15,
-        intermidiate: 12,
-        expert: 10,
-    })
+    const [Time, setTime] = useState(0)
     
     
     return(
@@ -105,9 +101,9 @@ const WholeBodyPage = () =>{
                     <Title>난이도를 선택하세요!</Title>
                     <FLEX>
                         {/* 텍스트는 각각의 버튼의 export에 있음 */}
-                        <GreenButton >초보자</GreenButton>
-                        <BlueButton >중급자</BlueButton>
-                        <RedButton >숙련자</RedButton>
+                        <GreenButton onClick={()=>{setTime(15)} }>초보자</GreenButton> {/*익명함수 만들어서 setTime 함수 실행*/}
+                        <BlueButton onClick={()=>{setTime(12)} }>중급자</BlueButton>
+                        <RedButton onClick={()=>{setTime(10)} }>숙련자</RedButton>
                     </FLEX>
                 </SettingSection>
 
