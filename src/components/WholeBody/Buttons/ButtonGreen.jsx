@@ -29,11 +29,11 @@ const BtnLv1 = styled.button`
 
 
 
-const GreenButton = ({children}) =>{
+const GreenButton = ({children, setTime}) =>{ {/*useStae 요소들을 가져오기 않음 - setTime이라는 함수는 이미 값을 설정하는 함수인데 그거 자체를 넘겨주었기 때문에*/}
 
     return(
         <div>
-            <BtnLv1>{children}</BtnLv1>
+            <BtnLv1 onClick={()=>{setTime(15)}}>{children}</BtnLv1>
         </div>
         
     )

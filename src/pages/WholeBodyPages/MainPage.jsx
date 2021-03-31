@@ -101,16 +101,16 @@ const WholeBodyPage = () =>{
                     <Title>난이도를 선택하세요!</Title>
                     <FLEX>
                         {/* 텍스트는 각각의 버튼의 export에 있음 */}
-                        <GreenButton onClick={()=>{setTime(15)} }>초보자</GreenButton> {/*익명함수 만들어서 setTime 함수 실행*/}
-                        <BlueButton onClick={()=>{setTime(12)} }>중급자</BlueButton>
-                        <RedButton onClick={()=>{setTime(10)} }>숙련자</RedButton>
+                        <GreenButton setTime={setTime}>초보자</GreenButton> {/* setTime 이라는 함수를 버튼 컴포넌트로 파라미터로 넘김, setTime 함수 실행*/}
+                        <BlueButton setTime={setTime}> 중급자</BlueButton>
+                        <RedButton setTime={setTime}>숙련자</RedButton>
                     </FLEX>
                 </SettingSection>
 
                 <TimerSetting>
                     <Title>타이머</Title>
                     
-                    {/* {Time} */}
+                    {Time}
                 </TimerSetting>
             </FLEX>
             <MainSection>
