@@ -6,7 +6,7 @@ import RangeProvider from './provider/RangeProvider';
 import MainPage from './pages/LowerBodyPages/MainPage';
 import FirstPage from './pages/LowerBodyPages/FirstPage';
 import App from './pages/App';
-import wholeBodyPage from './components/WholeBody/wholeBodyPage';  //나중에 pages 폴더로 옯기기
+import wholeBodyPage from './pages/WholeBodyPages/MainPage';  //나중에 pages 폴더로 옯기기
 
 ReactDOM.render(
   <React.StrictMode>
