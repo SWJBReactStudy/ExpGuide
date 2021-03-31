@@ -45,6 +45,8 @@ const Title = styled.p`
     margin-left: 27%;
     margin-top: 10px;
 
+    text-align: center;
+
     padding-top: 5px;
 
     //property
@@ -86,6 +88,12 @@ const MainSection = styled.div`
     box-shadow: 0px 5px 53px -32px rgba(0,0,0,0.36);
 `
 
+const TimeText = styled.p`
+    margin-top: 20px;
+
+    font-size: 30px;
+    text-align: center;
+`
 // 함수 부분
 
 
@@ -110,7 +118,7 @@ const WholeBodyPage = () =>{
                 <TimerSetting>
                     <Title>타이머</Title>
                     
-                    {Time}
+                    <TimeText>{Time}분</TimeText> 
                 </TimerSetting>
             </FLEX>
             <MainSection>
