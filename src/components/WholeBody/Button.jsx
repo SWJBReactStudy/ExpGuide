@@ -14,7 +14,7 @@ const Button = styled.button`
 
 const Button = ({children, wh, color, radius}) =>{
     return(
-        <Button BtnWidth={wh[0]} BtnHeight={wh[1]} >{children}</Button>
+        <Button BtnWidth={wh[0]} BtnHeight={wh[1]} BtnColor={color} BtnRadius={radius} >{children}</Button>
     );
 }
 
