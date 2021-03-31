@@ -29,7 +29,7 @@ const BtnLv3 = styled.button`
     }
 `
 
-const RedButton = ({children, setTime}) =>{ {/*useStae 요소들을 가져오기 않음 - setTime이라는 함수는 이미 값을 설정하는 함수인데 그거 자체를 넘겨주었기 때문에*/}
+const RedButton = ({children, setTime}) =>{ {/*useStae 요소들을 가져올 필요 없음 - setTime이라는 함수는 이미 값을 설정하는 함수인데 그거 자체를 넘겨주었기 때문에*/}
 
     return(
         <div>
