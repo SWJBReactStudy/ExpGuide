@@ -118,7 +118,7 @@ const WholeBodyPage = () =>{
                 <TimerSetting>
                     <Title>타이머</Title>
                     <TimeText>{Time}분</TimeText> 
-                    <GreenButton Width={380} Height={40}>시작하기!</GreenButton>
+                    <GreenButton Width={380} Height={40} setTime={null}>시작하기!</GreenButton>
                 </TimerSetting>
             </FLEX>
             <MainSection>
