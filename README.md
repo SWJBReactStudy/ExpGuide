@@ -1,32 +1,3 @@
-```python
-from microbit import *
-import radio
-
-radio.on()
-radio.config(channel=4)
-radio.config(power=7)
-radio.config(group=25)
-
-flag = True
-
-while True:
-    if flag :
-        if button_a.is_pressed() :
-            print("Pressed!")
-            radio.config(group=2)
-            display.clear()
-            radio.send("choice")
-            flag = False
-        else :
-            display.show(Image.DUCK)
-    else :
-        if radio.receive() == "choice" :
-            display.show(Image.DUCK)
-            flag = True
-        else :
-            display.show("R")
-```
-
 ## Exp Guide
 
 교도소 운동루틴을 가이드 합니다.
